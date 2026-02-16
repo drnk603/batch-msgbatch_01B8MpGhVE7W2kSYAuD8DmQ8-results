@@ -1,4 +1,77 @@
 <!DOCTYPE html><html lang="de"><head>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://domain.com/#org",
+      "name": "domain",
+      "url": "https://domain.com",
+      "email": "manager@domain.com",
+      "telephone": "+49 40 3692755",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Skyline Plaza, Europa-Allee 6, Floor 12, Office 1511, 60327 Frankfurt am Main"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "manager@domain.com",
+        "telephone": "+49 40 3692755"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://domain.com/#website",
+      "url": "https://domain.com",
+      "name": "domain",
+      "publisher": {
+        "@id": "https://domain.com/#org"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://domain.com/services.html#webpage",
+      "url": "https://domain.com/services.html",
+      "name": "Unsere Dienstleistungen - domain",
+      "isPartOf": {
+        "@id": "https://domain.com/#website"
+      },
+      "about": {
+        "@id": "https://domain.com/#org"
+      },
+      "inLanguage": "de",
+      "description": "Entdecken Sie unsere professionellen Consulting-Dienstleistungen. Strategieberatung, Prozessoptimierung und Digitale Transformation für Ihr Unternehmen.",
+      "mainEntity": {
+        "@type": "Service",
+        "name": "Unsere Dienstleistungen - domain",
+        "provider": {
+          "@id": "https://domain.com/#org"
+        }
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://domain.com/services.html#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Startseite",
+          "item": "https://domain.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services.Html",
+          "item": "https://domain.com/services.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Entdecken Sie unsere professionellen Consulting-Dienstleistungen. Strategieberatung, Prozessoptimierung und Digitale Transformation für Ihr Unternehmen.">
@@ -12,29 +85,40 @@
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
- </head>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+<link rel="stylesheet" href="./header-footer.css">
+<link rel="stylesheet" href="./consent.css">
+<script src="./consent.js"></script>
+</head>
  <body>
-  <header class="l-header">
-   <nav class="c-nav navbar navbar-expand-lg navbar-light bg-white sticky-top border-bottom" aria-label="Hauptnavigation">
-    <div class="container">
-     <a class="navbar-brand c-logo" href="/"> 
-      <svg class="c-logo__img" width="150" height="40" viewBox="0 0 150 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="BeratungPro Logo">
-       <rect width="40" height="40" rx="8" fill="#5B21B6"></rect> <path d="M15 12h10a5 5 0 0 1 0 10h-10v6" stroke="#BFFF00" stroke-width="2.5" stroke-linecap="round"></path> <text x="50" y="27" font-family="Outfit, sans-serif" font-size="18" font-weight="700" fill="#1f2937">BeratungPro</text>
-      </svg> 
-     </a>
-     <button class="c-nav__toggle navbar-toggler border-0" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Navigation umschalten"><span class="navbar-toggler-icon"></span></button>
-     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="c-nav__list navbar-nav ms-auto align-items-lg-center">
-       <li class="c-nav__item nav-item"><a class="nav-link active" aria-current="page" href="/">Startseite</a></li>
-       <li class="c-nav__item nav-item"><a class="nav-link" href="about.html">Über uns</a></li>
-       <li class="c-nav__item nav-item"><a class="nav-link" href="services.html">Leistungen</a></li>
-       <li class="c-nav__item nav-item"><a class="nav-link" href="contact.html">Kontakt</a></li>
-       <li class="c-nav__item nav-item ms-lg-3"><a class="c-button c-button--primary btn btn-primary" href="contact.html">Beratung anfragen</a></li>
+<header class="dr-header" data-dr-variant="v2">
+  <div class="dr-header-inner">
+    <nav class="dr-nav dr-nav-left" aria-label="Primary navigation left">
+      <ul class="dr-nav-list">
+        <li class="dr-nav-item"><a class="dr-nav-link" href="./index.html">Home</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./about.html">About</a></li>
       </ul>
-     </div>
-    </div>
-   </nav>
-  </header>
+    </nav>
+
+    <a class="dr-logo dr-logo-center" href="./index.html" aria-label="domain">domain</a>
+
+    <nav class="dr-nav dr-nav-right" aria-label="Primary navigation right">
+      <ul class="dr-nav-list">
+        <li class="dr-nav-item"><a class="dr-nav-link" href="./contact.html">Contact</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./services.html">Services</a></li>
+      </ul>
+    </nav>
+
+    <button class="dr-burger" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="dr-mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<nav class="dr-mobile-menu" id="dr-mobile-menu" aria-label="Mobile navigation">
+  <ul class="dr-mobile-nav-list">
+    <li class="dr-nav-item"><a class="dr-nav-link" href="./index.html">Home</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./about.html">About</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./contact.html">Contact</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./services.html">Services</a></li>
+  </ul>
+</nav>
+
   <main>
    <section class="l-section py-5" style="background: linear-gradient(135deg, #6B21A8 0%, #4C1D95 100%);">
     <div class="container">
@@ -402,73 +486,58 @@
     </div>
    </section>
   </main>
-  <footer class="l-footer bg-dark text-light py-5">
-   <div class="container">
-    <div class="row g-4">
-     <div class="col-lg-4">
-      <h3 class="h5 fw-bold mb-3">BeratungPro</h3>
-      <p class="small text-light-emphasis mb-3">Ihre Experten für strategische Unternehmensberatung in Deutschland. Wir unterstützen Sie auf dem Weg zu nachhaltigem Erfolg.</p>
-      <div class="small text-light-emphasis">
-       <p class="mb-2">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="me-2">
-         <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zM5.5 11.5l-2-2 1-1 1 1 3-3 1 1-4 4z"></path>
-        </svg>
-        {address}
-       </p>
-       <p class="mb-2">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="me-2">
-         <path d="M3 2a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2z"></path>
-        </svg>
-        {telephone}
-       </p>
-       <p class="mb-0">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="me-2">
-         <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2z"></path>
-        </svg>
-        info@domain.com
-       </p>
+  <footer class="dr-footer" aria-label="Seitenende">
+  <div class="dr-footer-inner">
+    <div class="dr-footer-top">
+      <div class="dr-footer-brand">
+        <div class="dr-footer-logo-wrap" aria-label="domain"></div>
+        <p class="dr-footer-tagline">Beratung und Services mit Fokus auf Ergebnisqualität.</p>
       </div>
-     </div>
-     <div class="col-6 col-lg-2">
-      <h4 class="h6 fw-bold mb-3">Navigation</h4>
-      <ul class="list-unstyled small">
-       <li class="mb-2"><a href="/" class="text-light-emphasis text-decoration-none">Startseite</a></li>
-       <li class="mb-2"><a href="about.html" class="text-light-emphasis text-decoration-none">Über uns</a></li>
-       <li class="mb-2"><a href="services.html" class="text-light-emphasis text-decoration-none">Leistungen</a></li>
-       <li class="mb-2"><a href="contact.html" class="text-light-emphasis text-decoration-none">Kontakt</a></li>
-      </ul>
-     </div>
-     <div class="col-6 col-lg-3">
-      <h4 class="h6 fw-bold mb-3">Rechtliches</h4>
-      <ul class="list-unstyled small">
-       <li class="mb-2"><a href="privacy.html" class="text-light-emphasis text-decoration-none">Datenschutzerklärung</a></li>
-       <li class="mb-2"><a href="terms_and_conditions.html" class="text-light-emphasis text-decoration-none">AGB</a></li>
-       <li class="mb-2"><a href="terms_of_services.html" class="text-light-emphasis text-decoration-none">Nutzungsbedingungen</a></li>
-       <li class="mb-2"><a href="cookie_policy.html" class="text-light-emphasis text-decoration-none">Cookie-Richtlinie</a></li>
-       <li class="mb-2"><a href="gdpr-rights.html" class="text-light-emphasis text-decoration-none">DSGVO-Rechte</a></li>
-       <li class="mb-2"><a href="impressum.html" class="text-light-emphasis text-decoration-none">Impressum</a></li>
-      </ul>
-     </div>
-     <div class="col-lg-3">
-      <h4 class="h6 fw-bold mb-3">Newsletter</h4>
-      <p class="small text-light-emphasis mb-3">Bleiben Sie auf dem Laufenden mit unseren neuesten Insights und Angeboten.</p>
-      <form class="d-flex gap-2">
-       <input type="email" class="form-control form-control-sm" placeholder="Ihre E-Mail" aria-label="E-Mail für Newsletter">
-       <button type="submit" class="btn btn-primary btn-sm">Anmelden</button>
-      </form>
-     </div>
+      <nav class="dr-footer-nav" aria-label="Hauptnavigation im Footer">
+        <h2 class="dr-footer-heading">Navigation</h2>
+        <ul class="dr-footer-nav-list">
+          <li class="dr-footer-nav-item"><a href="./index.html" class="dr-footer-link">Home</a></li>
+          <li class="dr-footer-nav-item"><a href="./about.html" class="dr-footer-link">About</a></li>
+          <li class="dr-footer-nav-item"><a href="./contact.html" class="dr-footer-link">Contact</a></li>
+          <li class="dr-footer-nav-item"><a href="./services.html" class="dr-footer-link">Services</a></li>
+        </ul>
+      </nav>
+      <nav class="dr-footer-legal" aria-label="Rechtliches">
+        <h2 class="dr-footer-heading">Rechtliches</h2>
+        <ul class="dr-footer-legal-list">
+          <li class="dr-footer-legal-item"><a href="./privacy.html" class="dr-footer-link">Privacy Policy</a></li>
+          <li class="dr-footer-legal-item"><a href="./terms_of_services.html" class="dr-footer-link">Terms of Service</a></li>
+          <li class="dr-footer-legal-item"><a href="./terms_and_conditions.html" class="dr-footer-link">Terms and Conditions</a></li>
+          <li class="dr-footer-legal-item"><a href="./cookie_policy.html" class="dr-footer-link">Cookie Policy</a></li>
+          <li class="dr-footer-legal-item"><a href="./gdpr-rights.html" class="dr-footer-link">GDPR Rights</a></li>
+          <li class="dr-footer-legal-item"><a href="./impressum.html" class="dr-footer-link">Impressum</a></li>
+        </ul>
+      </nav>
+      <section class="dr-footer-contact" aria-label="Kontakt">
+        <h2 class="dr-footer-heading">Kontakt</h2>
+        <p class="dr-footer-contact-item"><span class="dr-footer-contact-label">Adresse:</span> <span>Skyline Plaza, Europa-Allee 6, Floor 12, Office 1511, 60327 Frankfurt am Main</span></p>
+        <p class="dr-footer-contact-item"><span class="dr-footer-contact-label">Telefon:</span> <a href="tel:+49 40 3692755" class="dr-footer-link">+49 40 3692755</a></p>
+        <p class="dr-footer-contact-item"><span class="dr-footer-contact-label">E-Mail:</span> <a href="mailto:manager@domain.com" class="dr-footer-link">manager@domain.com</a></p>
+      </section>
     </div>
-    <hr class="my-4 border-secondary">
-    <div class="row">
-     <div class="col-md-6 text-center text-md-start">
-      <p class="small text-light-emphasis mb-0">© 2025 BeratungPro. Alle Rechte vorbehalten.</p>
-     </div>
-     <div class="col-md-6 text-center text-md-end">
-      <p class="small text-light-emphasis mb-0">Entwickelt mit Leidenschaft für Exzellenz</p>
-     </div>
+    <div class="dr-footer-bottom">
+      <p class="dr-footer-disclaimer">Die Inhalte auf domain und unter der Domain domain.com dienen ausschließlich allgemeinen Informationszwecken und stellen keine rechtliche oder finanzielle Beratung dar.</p>
+      <p class="dr-footer-meta"><span class="dr-year"></span> © domain. All rights reserved.</p>
     </div>
-   </div>
-  </footer>
-  <script src="script.js" defer=""></script>
+  </div>
+</footer>
+  
  
+  
+  
+
+<script src="script.js" defer=""></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+if (typeof AOS !== "undefined" && !window.__AOS_INITIALIZED__) {
+  AOS.init({ once: true, duration: 700, easing: "ease-out-cubic" });
+  window.__AOS_INITIALIZED__ = true;
+}
+</script>
+<script src="./header-footer.js"></script>
 </body></html>

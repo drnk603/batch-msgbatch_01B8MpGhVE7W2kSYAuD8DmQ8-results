@@ -1042,7 +1042,6 @@ li {
 .card {
   display: flex;
   flex-direction: column;
-  height: 100%;
   background-color: var(--color-bg-white);
   border: 1px solid var(--color-border);
   border-radius: var(--border-radius-lg);

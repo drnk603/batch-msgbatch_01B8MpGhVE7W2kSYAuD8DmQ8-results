@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://domain.com/about.html</loc>
+  </url>
+  <url>
+    <loc>https://domain.com/contact.html</loc>
+  </url>
+  <url>
+    <loc>https://domain.com/cookie_policy.html</loc>
+  </url>
+  <url>
+    <loc>https://domain.com/gdpr-rights.html</loc>
+  </url>
+  <url>
+    <loc>https://domain.com/impressum.html</loc>
+  </url>
+  <url>
+    <loc>https://domain.com/index.html</loc>
+  </url>
+  <url>
+    <loc>https://domain.com/privacy.html</loc>
+  </url>
+  <url>
+    <loc>https://domain.com/services.html</loc>
+  </url>
+  <url>
+    <loc>https://domain.com/terms_and_conditions.html</loc>
+  </url>
+  <url>
+    <loc>https://domain.com/terms_of_services.html</loc>
+  </url>
+</urlset>

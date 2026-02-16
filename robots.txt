@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /*thank_you*
+Disallow: /*thank-you*
+Disallow: /*thanks*
+Disallow: /*success*
+
+Sitemap: https://domain.com/sitemap.xml
